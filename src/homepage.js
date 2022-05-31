@@ -4,6 +4,8 @@ const newPaintingContainer = document.getElementById("submit-painting-form");
 
 let addPainting = false;
 
+//testing 
+
 let baseURL = "http://localhost:3000/artworks";
 
 const artContainerKey = document.getElementById("art-container");

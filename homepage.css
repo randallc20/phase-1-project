@@ -1,1 +1,12 @@
+#quote-list {
+  padding: 20px;
+}
 
+.hidden {
+  display: none;
+}
+
+input {
+  width: 30%;
+  height: 80px;
+}

@@ -10,42 +10,71 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/index.css" />
-    <title>Motivation</title>
+    <link rel="stylesheet" href= "homepage.css"/>
+    <title>Custom Canvas</title>
   </head>
-  <body class="container center">
-    <h1>My favorite quotes:</h1>
-    <div>
-      <ul id="quote-list"></ul>
+  <body class="body container">
+    <div id="custom-canvas-header">
+      <img
+      src="https://images.unsplash.com/photo-1580493113011-ad79f792a7c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FudmFzfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+      width="200"
+      height="200"
+      class="center"
+      alt="custom-canvas-header"
+    />
     </div>
     <hr />
-    <div>
-      <form id="new-quote-form">
-        <div class="form-group">
-          <label for="new-quote">New Quote</label>
+    <div class="add-new-painting-container" id="submit-painting-form">
+      <h1>Add a new painting:</h1>
+      <div>
+        <ul id="painting-list"></ul>
+     </div>
+      <form id="new-painting-form">
+          <label for="new-artist">Artist Name:</label>
           <input
-            name="quote"
+            name="artist"
             type="text"
             class="form-control"
-            id="new-quote"
-            placeholder="Learn. Love. Code."
+            id="new-artist-name"
+            placeholder="Artist name..."
           />
-        </div>
-        <div class="form-group">
-          <label for="Author">Author</label>
+          <label for="new-painting-title">Painting Title:</label>
           <input
-            name="author"
+            name="title"
             type="text"
             class="form-control"
-            id="author"
-            placeholder="Flatiron School"
+            id="new-painting-title"
+            placeholder="Painting title..."
           />
-        </div>
-        <button id="submit-button" type="submit" class="btn btn-primary">
-          Submit
-        </button>
+            <label for="new-painting-description">Painting Description:</label>
+            <input
+              name="description"
+              type="text"
+              class="form-control"
+              id="new-painting-description"
+              placeholder="Painting description..."
+            />
+              <label for="new-painting-price">Painting Price:</label>
+              <input
+                name="price"
+                type="text"
+                class="form-control"
+                id="new-painting-price"
+                placeholder="Painting price..."
+              />
+              <input
+                name="submit"
+                type="submit"
+                class="submit"
+                id="create-new-painting"
+                value="Create Painting"
+              />
       </form>
     </div>
+    <p style="text-align:center">
+      <button id="add-new-painting" type="submit" class="btn btn-primary">Add New Painting</button>
+    </p>
+
     <script src="src/homepage.js"></script>
   </body>
 </html>

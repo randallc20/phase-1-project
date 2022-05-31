@@ -1,12 +1,19 @@
-#quote-list {
+#painting-list {
   padding: 20px;
 }
 
-.hidden {
-  display: none;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-input {
-  width: 30%;
-  height: 80px;
+.add-new-painting-container{
+    padding: 1rem;
+    width: stretch;
+    height: auto;
+    display: none;
+    background: #515DA2;
+    opacity: .8;
 }

@@ -22,15 +22,6 @@
       class="center"
       alt="custom-canvas-header"
     />
-
-    <div id="art-container" class="row">
-      <div id="even" class="column"></div>
-      <div id="odd" class="column"></div>
-    </div>
-
-    
-
-    <hr />
     <div class="add-new-painting-container" id="submit-painting-form">
       <h1>Add a new painting:</h1>
       <div>
@@ -44,43 +35,54 @@
             class="form-control"
             id="new-artist-name"
             placeholder="Artist name..."
-          />
-          <label for="new-painting-title">Painting Title:</label>
-          <input
+            />
+            <label for="new-painting-title">Painting Title:</label>
+            <input
             name="title"
             type="text"
             class="form-control"
             id="new-painting-title"
             placeholder="Painting title..."
-          />
+            />
             <label for="new-painting-description">Painting Description:</label>
             <input
-              name="description"
-              type="text"
-              class="form-control"
-              id="new-painting-description"
-              placeholder="Painting description..."
+            name="description"
+            type="text"
+            class="form-control"
+            id="new-painting-description"
+            placeholder="Painting description..."
             />
-              <label for="new-painting-price">Painting Price:</label>
-              <input
-                name="price"
-                type="text"
-                class="form-control"
-                id="new-painting-price"
-                placeholder="Painting price..."
-              />
-              <input
-                name="submit"
-                type="submit"
-                class="submit"
-                id="create-new-painting"
-                value="Create Painting"
-              />
-      </form>
+            <label for="new-painting-price">Painting Price:</label>
+            <input
+            name="price"
+            type="text"
+            class="form-control"
+            id="new-painting-price"
+            placeholder="Painting price..."
+            />
+            <input
+            name="submit"
+            type="submit"
+            class="submit"
+            id="create-new-painting"
+            value="Create Painting"
+            />
+          </form>
+        </div>
+        
+        <p style="text-align:center">
+          <button id="add-new-painting" type="submit" class="btn btn-primary">Add New Painting</button>
+        </p>
+    <div id="art-container" class="row">
+      <div id="even-a" class="column"></div>
+      <div id="odd-a" class="column"></div>
+      <div id="even-b" class="column"></div>
+      <div id="odd-b" class="column"></div>
     </div>
-    <p style="text-align:center">
-      <button id="add-new-painting" type="submit" class="btn btn-primary">Add New Painting</button>
-    </p>
+
+    
+
+    <hr />
 
     <script src="src/homepage.js"></script>
   </body>

@@ -4,6 +4,8 @@ const newPaintingContainer = document.getElementById("submit-painting-form");
 
 let addPainting = false;
 
+//this is to test pushng to github
+
 document.addEventListener("DOMContentLoaded", (e) => {
     e.preventDefault();
 

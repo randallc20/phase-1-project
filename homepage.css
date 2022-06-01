@@ -4,12 +4,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-nav {
-#art-container{
-  background-image: linear-gradient(red, yellow);
+#art-container {
+  background-color: #0a5071;
 }
-
 nav {
   display: flex;
   width: 100%;
@@ -19,26 +16,19 @@ nav {
   text-align: center;
   padding: 15px 30px;
 }
-
 nav .icon {
   font-size: 35px;
   font-weight: 800;
   color: #fff;
   cursor: pointer;
 }
-
 nav ol {
   display: flex;
   list-style: none;
   margin: auto;
 }
-
 nav ol li {
   margin: 0 2px;
-}
-
-nav ol li a {
-=======
   color: #fff;
   font-size: 20px;
   text-decoration: none;
@@ -46,19 +36,16 @@ nav ol li a {
   letter-spacing: 1px;
   padding: 5px 10px;
 }
-
 nav ol li:hover a {
   background: #fff;
   color: #0a5071;
 }
-
 nav .search-box {
   display: flex;
   margin: auto 0;
   height: 35px;
   line-height: 35px;
 }
-
 nav .search-box input {
   border: none;
   outline: none;
@@ -68,7 +55,6 @@ nav .search-box input {
   font-size: 20px;
   width: 350px;
 }
-
 nav .search-box span {
   color: #0a5071;
   font-size: 20px;
@@ -79,7 +65,6 @@ nav .search-box span {
   cursor: pointer;
   z-index: 1;
 }
-
 nav .search-box span::after {
   height: 100%;
   width: 0%;
@@ -91,28 +76,23 @@ nav .search-box span::after {
   z-index: -1;
   transition: 0.3s;
 }
-
 nav .search-box span:hover::after {
   width: 100%;
 }
-
 nav .bar {
   position: relative;
   margin: auto;
   display: none;
 }
-
 nav .bar span {
   position: absolute;
   color: #fff;
   font-size: 35px;
 }
-
 input[type="checkbox"] {
   -webkit-appearance: none;
   display: none;
 }
-
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1250px) {
   nav {
@@ -191,7 +171,6 @@ input[type="checkbox"] {
     max-width: 50%;
   }
 }
-
 /* section{
   background-image: url(https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29vZGVuJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80);
   height: 100%;
@@ -203,20 +182,16 @@ input[type="checkbox"] {
   z-index: -1;
   filter: brightness(30%);
 } */
-
-
 /* this is stuff I am not working with rn */
 #painting-list {
   padding: 20px;
 }
-
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
-
 .add-new-painting-container {
   padding: 1rem;
   width: stretch;
@@ -225,42 +200,27 @@ input[type="checkbox"] {
   background: black;
   opacity: 0.8;
 }
-
 /* split */
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
-
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
 }
-
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     flex: 100%;
     max-width: 100%;
   }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-}
-
-/* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 5px 0 0;
 }

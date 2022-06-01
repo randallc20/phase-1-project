@@ -7,7 +7,7 @@ let addPainting = false;
 
 //testing
 
-let baseURL = "http://localhost:3000/artworks";
+const baseURL = "http://localhost:3000/artworks";
 
 const artContainerKey = document.getElementById("art-container");
 const column1 = document.getElementById("column1");
@@ -17,6 +17,7 @@ const column4 = document.getElementById("column4");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   loadContent();
+  newPaintingSubmitListener();
 
   e.preventDefault();
 
@@ -81,4 +82,30 @@ function startListening(artPiece, image, imageCard, description) {
       imageCard.append(description);
     }
   });
+}
+
+function newPaintingSubmitListener(){
+  document.getElementById("new-painting-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let newPaintingName = document.getElementById("new-artist-name").value
+    let newPaintingTitle = document.getElementById("new-painting-title").value
+    let newPaintingDescription = document.getElementById("new-painting-description").value
+    let newPaintingPrice = document.getElementById("new-painting-price").value
+    let newPaintingLink = document.getElementById("new-painting-link").value
+    let newPaintingDate = new Date();
+    let newPaintingLikes = 0
+    let newPainting = {art_title:newPaintingTitle, artist:newPaintingName, date:newPaintingDate, img_url:newPaintingLink,
+    description:newPaintingDescription, price:newPaintingPrice, likes:newPaintingLikes}
+    postNewPainting(newPainting)
+  });
+}
+
+function postNewPainting(data={}){
+  fetch(baseURL, {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': "application/json"
+    }, body: JSON.stringify(data)
+}).then(response => response.json()).then(imageGenerator(data));
 }

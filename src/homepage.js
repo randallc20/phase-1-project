@@ -57,6 +57,10 @@ function imageGenerator(artPiece, i) {
   let downloadBtn = document.createElement("button");
   downloadBtn.innerHTML = "Download";
   btnContainer.append(likeBtn, deleteBtn, downloadBtn);
+  // Button listeners
+  likeButton(artPiece);
+  deleteButton(artPiece);
+  downloadButton(artPiece);
 
   // Card production / appending
   imageCard.classList.add("card");
@@ -144,3 +148,9 @@ function postNewPainting(data = {}) {
     .then((response) => response.json())
     .then(imageGenerator(data));
 }
+
+function likeButton(artPiece) {}
+
+function deleteButton(artPiece) {}
+
+function downloadButton(artPiece) {}

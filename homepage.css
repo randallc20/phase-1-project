@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-nav{
+nav {
   display: flex;
   width: 100%;
   background: #0a5071;
@@ -15,24 +15,24 @@ nav{
   padding: 15px 30px;
 }
 
-nav .icon{
+nav .icon {
   font-size: 35px;
   font-weight: 800;
   color: #fff;
   cursor: pointer;
 }
 
-nav ol{
+nav ol {
   display: flex;
   list-style: none;
   margin: auto;
 }
 
-nav ol li{
+nav ol li {
   margin: 0 2px;
 }
 
-nav ol li a{
+nav ol li a {
   color: #fff;
   font-size: 20px;
   text-decoration: none;
@@ -41,19 +41,19 @@ nav ol li a{
   padding: 5px 10px;
 }
 
-nav ol li:hover a{
+nav ol li:hover a {
   background: #fff;
   color: #0a5071;
 }
 
-nav .search-box{
+nav .search-box {
   display: flex;
   margin: auto 0;
   height: 35px;
   line-height: 35px;
 }
 
-nav .search-box input{
+nav .search-box input {
   border: none;
   outline: none;
   background: #fff;
@@ -63,7 +63,7 @@ nav .search-box input{
   width: 350px;
 }
 
-nav .search-box span{
+nav .search-box span {
   color: #0a5071;
   font-size: 20px;
   background: #fff;
@@ -74,10 +74,10 @@ nav .search-box span{
   z-index: 1;
 }
 
-nav .search-box span::after{
+nav .search-box span::after {
   height: 100%;
   width: 0%;
-  content: '';
+  content: "";
   background: red;
   position: absolute;
   top: 0;
@@ -86,47 +86,47 @@ nav .search-box span::after{
   transition: 0.3s;
 }
 
-nav .search-box span:hover::after{
+nav .search-box span:hover::after {
   width: 100%;
 }
 
-nav .bar{
+nav .bar {
   position: relative;
   margin: auto;
   display: none;
 }
 
-nav .bar span{
+nav .bar span {
   position: absolute;
   color: #fff;
   font-size: 35px;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   -webkit-appearance: none;
   display: none;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1250px) {
-  nav{
+  nav {
     display: block;
     padding: 0;
   }
-  nav .icon{
+  nav .icon {
     display: inline-block;
     padding: 15px 30px;
   }
-  nav .search-box{
+  nav .search-box {
     width: 100%;
     display: inline-flex;
     justify-content: center;
     margin-bottom: 15px;
   }
-  nav .search-box input{
+  nav .search-box input {
     width: 90%;
   }
-  nav ol{
+  nav ol {
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -134,49 +134,49 @@ input[type="checkbox"]{
     visibility: hidden;
     transition: 0.3s;
   }
-  nav ol li{
+  nav ol li {
     text-align: center;
     transition: 0.3s 0.1s all;
     opacity: 0;
   }
-  nav ol li a{
+  nav ol li a {
     color: black;
     font-size: 28px;
     padding: 25px;
     display: block;
   }
-  nav ol li:nth-child(1){
+  nav ol li:nth-child(1) {
     transform: translateX(-150px);
   }
-  nav ol li:nth-child(2){
+  nav ol li:nth-child(2) {
     transform: translateX(-200px);
   }
-  nav ol li:nth-child(3){
+  nav ol li:nth-child(3) {
     transform: translateX(-250px);
   }
-  nav .bar{
+  nav .bar {
     display: block;
     position: absolute;
     top: 20px;
     right: 80px;
     cursor: pointer;
   }
-  nav .bar #times{
+  nav .bar #times {
     display: none;
   }
-  #check:checked ~ nav .bar #times{
+  #check:checked ~ nav .bar #times {
     display: block;
   }
-  #check:checked ~ nav .bar #bars{
+  #check:checked ~ nav .bar #bars {
     display: none;
   }
-  #check:checked ~ nav ol{
+  #check:checked ~ nav ol {
     visibility: visible;
     height: 465px;
   }
   #check:checked ~ nav ol li:nth-child(1),
   #check:checked ~ nav ol li:nth-child(2),
-  #check:checked ~ nav ol li:nth-child(3){
+  #check:checked ~ nav ol li:nth-child(3) {
     transform: translateX(0);
     opacity: 1;
   }
@@ -185,19 +185,6 @@ input[type="checkbox"]{
     max-width: 50%;
   }
 }
-
-/* section{
-  background-image: url(https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29vZGVuJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-position: center;
-  background-size: cover;
-  top: 0;
-  z-index: -1;
-  filter: brightness(30%);
-} */
-
 
 /* this is stuff I am not working with rn */
 #painting-list {
@@ -248,9 +235,8 @@ input[type="checkbox"]{
   }
 }
 
-
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
 }

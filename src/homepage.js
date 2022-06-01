@@ -44,7 +44,7 @@ function imageGenerator(artPiece, i) {
   imageCard.classList.add("card");
 
   let image = document.createElement("img");
-  let h4 = document.createElement()
+  // let h4 = document.createElement()
 
   image.src = artPiece.img_url;
   startListening(artPiece, image);

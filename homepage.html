@@ -11,17 +11,30 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href= "homepage.css"/>
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
     <title>Custom Canvas</title>
   </head>
+
   <body class="body container">
+    <input type="checkbox" id="check">
+    <nav>
+      <div class="icon"><b style="color: red;">Custom Canvas</b></div>
+      <div class="search-box">
+        <input type="search" placeholder="Seach...">
+        <span class="fa fa-search"></span>
+      </div>
+      <ol>
+        <li><a href="">DROPDOWN FILTER</a></li>
+        <li><a href="">PROFILE PAGE</a></li>
+        <li><a href="">ADD IMAGE</a></li>
+      </ol>
+      <label for="check" class="bar">
+        <span class="fa fa-bars" id="bars"></span>
+        <span class="fa fa-times" id="times"></span>
+      </label>
+    </nav>
+    <section></section>
     <div id="custom-canvas-header">
-      <img
-      src="https://images.unsplash.com/photo-1580493113011-ad79f792a7c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FudmFzfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-      width="200"
-      height="200"
-      class="center"
-      alt="custom-canvas-header"
-    />
     <div class="add-new-painting-container" id="submit-painting-form">
       <h1>Add a new painting:</h1>
       <div>
@@ -79,9 +92,6 @@
       <div id="even-b" class="column"></div>
       <div id="odd-b" class="column"></div>
     </div>
-
-    
-
     <hr />
 
     <script src="src/homepage.js"></script>

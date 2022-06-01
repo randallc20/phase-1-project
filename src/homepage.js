@@ -58,8 +58,8 @@ function imageGenerator(artPiece, i) {
   downloadBtn.innerHTML = "Download";
   btnContainer.append(likeBtn, deleteBtn, downloadBtn);
   // Button listeners
-  likeButton(artPiece);
-  deleteButton(artPiece);
+  likeButton(artPiece, likeBtn);
+  deleteButton(artPiece, deleteBtn, imageCard);
   downloadButton(artPiece);
 
   // Card production / appending
@@ -111,7 +111,7 @@ function newPaintingSubmitListener() {
   document
     .getElementById("new-painting-form")
     .addEventListener("submit", (e) => {
-      e.preventDefault();
+      //e.preventDefault();
       let newPaintingName = document.getElementById("new-artist-name").value;
       let newPaintingTitle =
         document.getElementById("new-painting-title").value;
@@ -149,8 +149,42 @@ function postNewPainting(data = {}) {
     .then(imageGenerator(data));
 }
 
-function likeButton(artPiece) {}
+function likeButton(artPiece, likeBtn) {
+  likeBtn.addEventListener("click", () => {
+    let newLikes = parseInt(artPiece.likes) + 1;
+    let data = {
+      likes: newLikes,
+    };
 
-function deleteButton(artPiece) {}
+    // console.log(newLikes);
+    fetch(baseURL + `/${artPiece.id}`, {
+      method: "PATCH", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      });
+  });
+}
+
+function deleteButton(artPiece, deleteBtn, imageCard) {
+  let deleteCard = imageCard;
+  deleteBtn.addEventListener("click", () => {
+    fetch(baseURL + `/${artPiece.id}`, {
+      method: "DELETE", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        deleteCard.remove();
+      });
+  });
+}
 
 function downloadButton(artPiece) {}

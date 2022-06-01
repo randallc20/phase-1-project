@@ -210,7 +210,7 @@ input[type="checkbox"] {
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
+  /* padding: 0 4px; */
 }
 .column img {
   margin-top: 8px;
@@ -223,4 +223,15 @@ input[type="checkbox"] {
     flex: 100%;
     max-width: 100%;
   }
+}
+
+.card {
+  background-color: #c1c0ce;
+  /* margin-top: 7px; */
+  margin: 2.5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+img {
+  border-radius: 10px 10px 10px 10px;
 }

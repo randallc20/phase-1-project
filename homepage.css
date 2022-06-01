@@ -205,19 +205,19 @@ section{
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.add-new-painting-container{
-    padding: 1rem;
-    width: stretch;
-    height: auto;
-    display: none;
-    background: #515DA2;
-    opacity: .8;
+.add-new-painting-container {
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+  display: none;
+  background: #515da2;
+  opacity: 0.8;
 }
 
 /* split */

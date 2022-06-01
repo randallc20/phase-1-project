@@ -10,24 +10,27 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href= "homepage.css"/>
+    <link rel="stylesheet" href="homepage.css" />
     <title>Custom Canvas</title>
   </head>
-  <body class="body container">
-    <div id="custom-canvas-header">
+  <body>
+    <div class="overlay hidden"></div>
+
+    <div class="modal">
+      <button class="close-modal">✖️</button>
       <img
-      src="https://images.unsplash.com/photo-1580493113011-ad79f792a7c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FudmFzfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-      width="200"
-      height="200"
-      class="center"
-      alt="custom-canvas-header"
-    />
-    <div class="add-new-painting-container" id="submit-painting-form">
-      <h1>Add a new painting:</h1>
-      <div>
-        <ul id="painting-list"></ul>
-     </div>
-      <form id="new-painting-form">
+        src="https://www.artic.edu/iiif/2/237c25a2-6051-a8e7-1610-a01938d4deab/full/843,/0/default.jpg"
+        alt=""
+      />
+    </div>
+
+    <div id="custom-canvas-header">
+      <div class="add-new-painting-container" id="submit-painting-form">
+        <h1>Add a new painting:</h1>
+        <div>
+          <ul id="painting-list"></ul>
+        </div>
+        <form id="new-painting-form">
           <label for="new-artist">Artist Name:</label>
           <input
             name="artist"
@@ -35,52 +38,54 @@
             class="form-control"
             id="new-artist-name"
             placeholder="Artist name..."
-            />
-            <label for="new-painting-title">Painting Title:</label>
-            <input
+          />
+          <label for="new-painting-title">Painting Title:</label>
+          <input
             name="title"
             type="text"
             class="form-control"
             id="new-painting-title"
             placeholder="Painting title..."
-            />
-            <label for="new-painting-description">Painting Description:</label>
-            <input
+          />
+          <label for="new-painting-description">Painting Description:</label>
+          <input
             name="description"
             type="text"
             class="form-control"
             id="new-painting-description"
             placeholder="Painting description..."
-            />
-            <label for="new-painting-price">Painting Price:</label>
-            <input
+          />
+          <label for="new-painting-price">Painting Price:</label>
+          <input
             name="price"
             type="text"
             class="form-control"
             id="new-painting-price"
             placeholder="Painting price..."
-            />
-            <input
+          />
+          <input
             name="submit"
             type="submit"
             class="submit"
             id="create-new-painting"
             value="Create Painting"
-            />
-          </form>
-        </div>
-        
-        <p style="text-align:center">
-          <button id="add-new-painting" type="submit" class="btn btn-primary">Add New Painting</button>
-        </p>
-    <div id="art-container" class="row">
-      <div id="even-a" class="column"></div>
-      <div id="odd-a" class="column"></div>
-      <div id="even-b" class="column"></div>
-      <div id="odd-b" class="column"></div>
+          />
+        </form>
+      </div>
+
+      <p style="text-align: center">
+        <button id="add-new-painting" type="submit" class="btn btn-primary">
+          Add New Painting
+        </button>
+      </p>
     </div>
 
-    
+    <div id="art-container" class="row">
+      <div id="column1" class="column"></div>
+      <div id="column2" class="column"></div>
+      <div id="column3" class="column"></div>
+      <div id="column4" class="column"></div>
+    </div>
 
     <hr />
 

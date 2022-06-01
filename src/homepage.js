@@ -1,4 +1,5 @@
 "use strict";
+
 const newPaintingButton = document.getElementById("add-new-painting");
 const newPaintingContainer = document.getElementById("submit-painting-form");
 
@@ -7,10 +8,10 @@ let addPainting = false;
 let baseURL = "http://localhost:3000/artworks";
 
 const artContainerKey = document.getElementById("art-container");
-const evenA = document.getElementById("even-a");
-const oddA = document.getElementById("odd-a");
-const evenB = document.getElementById("even-b");
-const oddB = document.getElementById("odd-b");
+const column1 = document.getElementById("column1");
+const column2 = document.getElementById("column2");
+const column3 = document.getElementById("column3");
+const column4 = document.getElementById("column4");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   loadContent();
@@ -39,16 +40,28 @@ function loadContent() {
 }
 
 function imageGenerator(artPiece, i) {
+  let imageCard = document.createElement("div");
+  imageCard.classList.add("card");
+
   let image = document.createElement("img");
+  let h4 = document.createElement()
+
   image.src = artPiece.img_url;
+  startListening(artPiece, image);
 
   if (i % 2 == 0 && i < 50) {
-    evenA.append(image);
+    column1.append(image);
   } else if (i % 2 == 0 && i > 51) {
-    evenB.append(image);
+    column2.append(image);
   } else if (i % 2 != 0 && i < 50) {
-    oddA.append(image);
+    column3.append(image);
   } else {
-    oddB.append(image);
+    column4.append(image);
   }
+}
+
+function startListening(artPiece, image) {
+  image.addEventListener("click", () => {
+    console.log(artPiece);
+  });
 }

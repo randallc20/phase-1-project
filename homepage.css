@@ -6,6 +6,11 @@
 }
 
 nav {
+#art-container{
+  background-image: linear-gradient(red, yellow);
+}
+
+nav {
   display: flex;
   width: 100%;
   background: #0a5071;
@@ -33,6 +38,7 @@ nav ol li {
 }
 
 nav ol li a {
+=======
   color: #fff;
   font-size: 20px;
   text-decoration: none;
@@ -186,6 +192,19 @@ input[type="checkbox"] {
   }
 }
 
+/* section{
+  background-image: url(https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29vZGVuJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  z-index: -1;
+  filter: brightness(30%);
+} */
+
+
 /* this is stuff I am not working with rn */
 #painting-list {
   padding: 20px;
@@ -203,7 +222,7 @@ input[type="checkbox"] {
   width: stretch;
   height: auto;
   display: none;
-  background: #515da2;
+  background: black;
   opacity: 0.8;
 }
 

@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+#art-container{
+  background-image: linear-gradient(red, yellow);
+}
+
 nav{
   display: flex;
   width: 100%;
@@ -186,7 +190,7 @@ input[type="checkbox"]{
   }
 }
 
-section{
+/* section{
   background-image: url(https://images.unsplash.com/photo-1555505019-8c3f1c4aba5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29vZGVuJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80);
   height: 100%;
   width: 100%;
@@ -196,7 +200,7 @@ section{
   top: 0;
   z-index: -1;
   filter: brightness(30%);
-}
+} */
 
 
 /* this is stuff I am not working with rn */

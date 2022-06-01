@@ -5,7 +5,7 @@ const newPaintingContainer = document.getElementById("submit-painting-form");
 
 let addPainting = false;
 
-//testing 
+//testing
 
 let baseURL = "http://localhost:3000/artworks";
 
@@ -44,26 +44,41 @@ function loadContent() {
 function imageGenerator(artPiece, i) {
   let imageCard = document.createElement("div");
   imageCard.classList.add("card");
-
   let image = document.createElement("img");
-  // let h4 = document.createElement()
-
   image.src = artPiece.img_url;
-  startListening(artPiece, image);
+  let h6 = document.createElement("h6");
+  let b = document.createElement("b");
+  let p = document.createElement("p");
+  let description = document.createElement("p");
+  description.innerText = `${artPiece.description}`;
+  let artist =
+    artPiece.artist === null
+      ? (p.innerText = "Artist Unknown")
+      : (p.innerText = `${artPiece.artist}`);
+
+  h6.append(b);
+  b.innerText = `${artPiece.art_title}`;
+
+  imageCard.append(image, h6, p);
 
   if (i % 2 == 0 && i < 50) {
-    column1.append(image);
+    column1.append(imageCard);
   } else if (i % 2 == 0 && i > 51) {
-    column2.append(image);
+    column2.append(imageCard);
   } else if (i % 2 != 0 && i < 50) {
-    column3.append(image);
+    column3.append(imageCard);
   } else {
-    column4.append(image);
+    column4.append(imageCard);
   }
+  startListening(artPiece, image, imageCard, description);
 }
 
-function startListening(artPiece, image) {
-  image.addEventListener("click", () => {
-    console.log(artPiece);
+function startListening(artPiece, image, imageCard, description) {
+  imageCard.addEventListener("click", () => {
+    if (imageCard.contains(description)) {
+      description.remove();
+    } else {
+      imageCard.append(description);
+    }
   });
 }

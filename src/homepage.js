@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   });
 });
 
+let limit = 20;
+let page = 1;
 function loadContent() {
   fetch(baseURL)
     .then((response) => response.json())
@@ -40,6 +42,8 @@ function loadContent() {
       });
     });
 }
+
+// monstersURL + `?_limit=${limit}` + `&_page=${page}`
 
 function imageGenerator(artPiece, i) {
   let imageCard = document.createElement("div");

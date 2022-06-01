@@ -230,6 +230,8 @@ input[type="checkbox"] {
   /* margin-top: 7px; */
   margin: 2.5px;
   border-radius: 10px 10px 10px 10px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 img {

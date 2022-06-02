@@ -54,13 +54,11 @@ function imageGenerator(artPiece, i) {
   likeBtn.innerHTML = `Like ❤️`;
   let deleteBtn = document.createElement("button");
   deleteBtn.innerHTML = "Delete";
-  let downloadBtn = document.createElement("button");
-  downloadBtn.innerHTML = "Download";
-  btnContainer.append(likeBtn, deleteBtn, downloadBtn);
+
+  btnContainer.append(likeBtn, deleteBtn);
   // Button listeners
   likeButton(artPiece, likeBtn);
   deleteButton(artPiece, deleteBtn, imageCard);
-  downloadButton(artPiece);
 
   // Card production / appending
   imageCard.classList.add("card");
@@ -186,5 +184,3 @@ function deleteButton(artPiece, deleteBtn, imageCard) {
       });
   });
 }
-
-function downloadButton(artPiece) {}

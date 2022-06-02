@@ -153,7 +153,6 @@ function likeButton(artPiece, likeBtn) {
     let data = {
       likes: newLikes,
     };
-
     // console.log(newLikes);
     fetch(baseURL + `/${artPiece.id}`, {
       method: "PATCH", // or 'PUT'
@@ -164,7 +163,7 @@ function likeButton(artPiece, likeBtn) {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
+        likeBtn.innerHTML = newLikes + ' ❤️';
       });
   });
 }
